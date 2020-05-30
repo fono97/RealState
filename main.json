@@ -1,0 +1,124 @@
+{
+  "info":[
+{
+    "location": "Manassas",
+    "price": "$3400000",
+    "agentNumber": 5712901634,
+    "url": "images/img-1.jpg",
+    "description": {
+        "bed": "6 beds",
+        "bath": "4baths",
+        "size": "4250 sqft",
+        "id":1
+    },
+    "agent": {
+        "url": "images/agent-1.png"
+    }
+},
+    {
+    "location": "Fairfax",
+    "price": "$3400000",
+    "agentNumber": 5712901634,
+    "url": "images/img-2.jpg",
+    "description": {
+        "bed": "4 beds",
+        "bath": "4baths",
+        "size": "4250 sqft",
+        "id":2
+    },
+    "agent": {
+        "url": "images/agent-1.png"
+    }
+},
+    {
+    "location": "Woodbrige",
+    "price": "$3400000",
+    "agentNumber": "5712901634",
+    "url": "images/img-3.jpg",
+    "description": {
+        "bed": "6 beds",
+        "bath": "4baths",
+        "size": "4250 sqft",
+        "id": 3
+    },
+    "agent": {
+        "url": "images/agent-1.png"
+    }
+},
+    {
+    "location": "Waghinston",
+    "price": "$3400000",
+    "agentNumber": 5712901634,
+    "url": "images/img-4.jpg",
+    "description": {
+        "bed": "6 beds",
+        "bath": "4baths",
+        "size": "4250 sqft",
+        "id": 4
+    },
+    "agent": {
+        "url": "images/agent-1.png"
+    }
+},
+    {
+    "location": "7598 duneiden lane",
+    "price": "$3400000",
+    "agentNumber": 5712901634,
+    "url": "images/img-5.jpg",
+    "description": {
+        "bed": "6 beds",
+        "bath": "4baths",
+        "size": "4250 sqft",
+        "id": 5
+    },
+    "agent": {
+        "url": "images/agent-1.png"
+    }
+},
+    {
+    "location": "7598 duneiden lane",
+    "price": "$3400000",
+    "agentNumber": 5712901634,
+    "url": "images/img-6.jpg",
+    "description": {
+        "bed": "6 beds",
+        "bath": "4baths",
+        "size": "4250 sqft",
+        "id": 6
+    },
+    "agent": {
+        "url": "images/agent-1.png"
+    }
+},
+    {
+    "location": "7598 duneiden lane",
+    "price": "$3400000",
+    "agentNumber": 5712901634,
+    "url": "images/img-7.jpg",
+    "description": {
+        "bed": "6 beds",
+        "bath": "4baths",
+        "size": "4250 sqft",
+        "id": 7
+    },
+    "agent": {
+        "url": "images/agent-1.png"
+    }
+},
+    {
+    "location": "7598 duneiden lane",
+    "price": "$3400000",
+    "agentNumber": 5712901634,
+    "url": "images/img-8.jpg",
+    "description": {
+        "bed": "6 beds",
+        "bath": "4baths",
+        "size": "4250 sqft",
+        "id": 8
+    },
+    "agent": {
+        "url": "images/agent-1.png"
+    }
+}
+  ]
+}
