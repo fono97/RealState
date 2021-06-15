@@ -1,0 +1,1433 @@
+/*start of    our global style*/
+:root {
+  --primaryColor: #f69314;
+  --white: #fff;
+  --transparent: #transparent;
+  --darkwhite: #f2f2f2;
+  --secondBackgroundColor: #f8f8f8;
+  --thirdBackgroundColor: #111;
+  --lightGray: #d3d3d3;
+  --secondColor: #095ff0;
+  --color-grey-dark: #626366;
+  --secondAlternative: #003da5;
+  --color-grey-light: #c4c6c8;
+  --color-grey-lighter: #f4f4f4;
+  --color-grey-darker: #404041;
+  --letterSpacing: 1.25px;
+  --backgroundColorFooter: rgba(0, 0, 0, 0.9);
+  --mainTransition: all 0.3s linear;
+  --colorError: #e74c3c;
+}
+
+
+i {
+  font-size: 1.5rem;
+}
+p {
+  font-size: 1rem;
+  font-family: Arial, Helvetica, sans-serif;
+}
+h4 {
+  font-size: 1.2rem;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+html {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--darkwhite);
+}
+header {
+  position: relative;
+  width: 100vw;
+}
+.nav-bar {
+  width:100%;
+  border-top: 4px solid var(--primaryColor);
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 75px;
+  background-color: var(--white);
+}
+/*end our global style*/
+
+.nav-bar h2 {
+  color: var(--primaryColor);
+  font-family: "Roboto", " sans-serif";
+  font-weight: 500;
+  font-size: 3rem;
+  margin-left: 2rem;
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+}
+.nav-menu {
+  display: flex;
+  margin-right: 2rem;
+  width: 17rem;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 2;
+}
+.nav-menu ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.nav-menu ul li {
+  list-style: none;
+  color: var(--secondColor);
+  font-size: 0.7rem;
+  text-transform: uppercase;
+}
+.nav-menu ul:hover li {
+  color: var(--secondAlternative);
+  transition: all ease-in-out 0.3s;
+}
+.nav-menu ul li span {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-right: 0.8rem;
+}
+.nav-menu ul li span i {
+  font-size: 1rem;
+}
+.nav-menu ul:nth-child(3) {
+  background-color: var(--secondAlternative);
+  border-radius: 4px;
+}
+.nav-menu ul:nth-child(3):hover {
+  background-color: var(--secondColor);
+  transition: all ease-in-out 0.3s;
+}
+.nav-menu ul:nth-child(3) li {
+  color: var(--white);
+  padding: 0.3rem;
+}
+/* start of the overlay section*/
+.overlay {
+  width: 100vw;
+  height: calc(60vh - 75px);
+  background-image: url("images/img-1.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.container-explore-menu {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.explore-menu h1 {
+  font-family: "catamaran" Arial, Helvetica, sans-serif;
+  font-weight: 900;
+  font-size: 1.7rem;
+  z-index: 30;
+  color: #fff;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.75);
+  text-transform: capitalize;
+}
+
+.explore-menu ul {
+  display: flex;
+  align-items: center;
+  background-color: #f2f2f2;
+  width: 100%;
+  height: 100%;
+}
+.explore-menu ul li {
+  font-family: "catamaran", "roboto", Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: 0.8rem;
+  list-style: none;
+  color: #111;
+  text-transform: uppercase;
+  cursor: pointer;
+  width: 25%;
+  height: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  outline: none;
+}
+
+.explore-menu li.active-tab {
+  background-color: var(--secondAlternative);
+  color: white;
+  width: 25%;
+}
+.show {
+  display: block;
+}
+.hide {
+  display: none;
+}
+.display-tab {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.display-tab input {
+  width: 90%;
+  height: 3rem;
+  padding: 0;
+  margin: 0;
+  outline: none;
+  border: none;
+}
+.display-tab input::placeholder {
+  display: block;
+  color: #111;
+  font-family: catamaran;
+  font-weight: 200;
+  font-size: 1rem;
+}
+.display-tab input[type="text"] {
+  padding-left: 20px;
+}
+
+.display-tab button {
+  color: var(--white);
+  padding: 0;
+  margin: 0;
+  outline: none;
+  border: none;
+  height: 3rem;
+  width: 2rem;
+  background-color: var(--primaryColor);
+  width: 10%;
+}
+.display-tab button i {
+  font-size: 1rem;
+}
+
+/* start of the agent section*/
+section#properties {
+  text-align: center;
+  background-color: white;
+  padding: 2rem 0;
+  width: 100vw;
+}
+.section-title h2 {
+  color: var(--primaryColor);
+  font-family: "Roboto", " sans-serif";
+  font-weight: 500;
+  font-size: 2.5rem;
+  margin: 2rem 0;
+}
+.our-houses {
+  width: 90vw;
+  margin: 0 auto;
+  max-width: 1170px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-column-gap: 1.5rem;
+  grid-row-gap: 2rem;
+}
+.image-container {
+  overflow: hidden;
+  cursor: pointer;
+  min-height: 20rem;
+}
+.image-container .house-img {
+  height: 100%;
+  width: 100%;
+}
+.image-container:hover .house-img {
+  opacity: 0.85;
+}
+.our-houses ul {
+  display: flex;
+  align-items: center;
+}
+.our-houses ul li {
+  font-weight: 100;
+  font-family: "roboto" Arial, Helvetica, sans-serif;
+  font-size: 1.2rem;
+  color: #111;
+  list-style: none;
+  border-right: 1px solid #111;
+  padding: 0 10px;
+}
+.our-houses ul .house-info-3 {
+  padding-right: 0 !important;
+  border: none !important;
+}
+.our-houses ul .house-info-1 {
+  padding-left: 0;
+}
+
+.house-info {
+  margin: 1rem 0;
+  text-align: left;
+}
+address {
+  margin: 0.5rem 0;
+  font-size: 1.2rem;
+  width: 100%;
+}
+h4 {
+  font-family: "roboto";
+  font-weight: 400;
+  font-size: 1.5rem;
+}
+
+/* end of the agent section*/
+section#agent {
+  text-align: center;
+  width: 100vw;
+}
+section#agent h2 {
+  color: var(--primaryColor);
+  font-family: "Roboto", " sans-serif";
+  font-weight: 500;
+  font-size: 2.5rem;
+  margin: 2rem 0;
+}
+.our-agents {
+  width: 90vw;
+  max-width: 1170px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-column-gap: 2rem;
+  grid-row-gap: 2rem;
+  z-index: 3;
+  margin: 0 auto;
+  padding-bottom: 2rem;
+}
+.our-agents article {
+  background-color: var(--white);
+  text-align: center;
+}
+
+.all-agent-info {
+  text-align: left;
+  margin: 1.5rem 1.5rem;
+}
+.image-container {
+  overflow: hidden;
+  cursor: pointer;
+  border-bottom: 1px solid var(--color-grey-light);
+  height: 8rem;
+}
+.image-container .agent-photo {
+  height: 100%;
+  width: 100%;
+}
+.image-container:hover {
+  opacity: 0.85;
+  z-index: 3;
+}
+.all-agent-info h4 {
+  font-family: "catamaran", Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+.all-agent-info h5 {
+  font-family: "catamaran", Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  text-transform: capitalize;
+}
+.all-agent-info span {
+  display: block;
+  color: lighgrey;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+.all-agent-info p {
+  display: flex;
+  align-items: center;
+  color: var(--secondAlternative);
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+  cursor: pointer;
+}
+.all-agent-info p:hover {
+  color: var(--secondColor);
+}
+.all-agent-info p i {
+  font-size: 1rem;
+  padding-right: 0.5rem;
+}
+.website-agent a {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  color: var(--secondAlternative);
+  text-transform: uppercase;
+  font-weight: 600;
+  font-family: "catamaran", "roboto", Arial, Helvetica, sans-serif;
+  font-size: 0.7rem;
+}
+.website-agent a i {
+  font-size: 1rem;
+  padding-right: 0.5rem;
+}
+.website-agent:hover a {
+  color: var(--secondColor);
+}
+.all-agent-info button {
+  width: 100%;
+  height: 2rem;
+  font-family: "catamaran,", "roboto", Arial, Helvetica, sans-serif;
+  font-size: 0.8rem;
+  font-weight: 600;
+  background-color: var(--white);
+  color: var(--secondAlternative);
+  border: 2px solid var(--secondAlternative);
+  text-transform: uppercase;
+  cursor: pointer;
+  border-radius: 4px;
+}
+.all-agent-info button:hover {
+  border: 2.1px solid var(--secondColor);
+  color: var(--secondColor);
+  transition: all ease-in-out 0.3s;
+  opacity: 0.9;
+}
+
+/* end of he agent section */
+/* how to use the app section */
+
+section#get-app {
+  text-align: center;
+  background-color: white;
+  padding: 1rem 0 0;
+  width: 100vw;
+}
+
+.background-image {
+  width: 100%;
+  height: 60vh;
+  background-image: url(images/img-3.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 1;
+  background-color: #1e355e;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container-how-to-use-app {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 1170px;
+  margin: 0 auto;
+}
+.how-to-use-app {
+  width: 20vw;
+  background-color: white;
+  text-align: left;
+  padding: 2rem;
+}
+.how-to-use-app h3 {
+  font-family: "roboto", "catamaran", Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  font-size: 1.5rem;
+  color: rgba(0, 0, 0, 0.75);
+  margin-bottom: 0.5rem;
+  border-bottom: 3px solid var(--secondAlternative);
+  padding-bottom: 0.4rem;
+  text-transform: capitalize;
+}
+.how-to-use-app p {
+  font-family: "roboto", Arial, Helvetica, sans-serif;
+  font-weight: 200;
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+  letter-spacing: 1.35px;
+  line-height: 25px;
+}
+.how-to-use-app a {
+  text-decoration: none;
+  color: var(--secondColor);
+  font-family: "roboto", Arial, Helvetica, sans-serif;
+  font-weight: 200;
+  font-size: 1rem;
+  text-align: left;
+  margin-bottom: 0.5rem;
+}
+.download-app {
+  width: 50vw;
+  text-align: right;
+  height: 40vh;
+}
+
+.download-app img {
+  height: 100%;
+}
+
+/*end of the how to use the app section */
+/*start of our design section*/
+section#design {
+  text-align: center;
+  width: 100vw;
+}
+.detail-design-container {
+  display: flex;
+  justify-content: flex-start;
+  width: 70%;
+  z-index: 3;
+}
+.title-design {
+  margin: 2rem 0;
+}
+.title-design h2 {
+  color: var(--primaryColor);
+  font-family: "Roboto", " sans-serif";
+  font-weight: 500;
+  font-size: 2.5rem;
+}
+.title-design p {
+  width: 50%;
+  color: var(--thirdBackgroundColor);
+  font-family: "Roboto", " sans-serif";
+  font-weight: 200;
+  font-size: 1.3rem;
+  margin: 1rem auto;
+  text-align: left;
+}
+.title-design p span {
+  color: var(--primaryColor);
+}
+.title-design button {
+  height: 2rem;
+  font-family: "catamaran,", "roboto", Arial, Helvetica, sans-serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  background-color: transparent;
+  color: var(--white);
+  border: 2px solid var(--primaryColor);
+  text-transform: uppercase;
+  cursor: pointer;
+  border-radius: 4px;
+  letter-spacing: 0.4px;
+  color: var(--primaryColor);
+  text-shadow: rgba(0, 0, 0, 0.7);
+  width: 20%;
+}
+.background-design {
+  position: relative;
+  width: 100vw;
+  height: 60vh;
+  background-image: url("images/project.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.container-detail-description {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  z-index: 3;
+}
+.detail-design {
+  width: 50%;
+  height: 50vh;
+  background-image: url("images/plan.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.description-house {
+  background: rgba(0, 0, 0, 0.9);
+  padding: 1.2rem;
+  z-index: 3;
+}
+.logo-invest {
+  width: 50%;
+  display: flex;
+  margin-bottom: 2rem;
+}
+.logo-company {
+  width: 70px;
+  height: 70px;
+}
+.logo-company img {
+  width: 100%;
+  height: 100%;
+}
+.invest-collection p {
+  border-bottom: 0.5px solid var(--white);
+  width: 100%;
+  margin: 2px 0 0;
+  line-height: 0.1em;
+  text-align: center;
+}
+.invest-collection p span {
+  text-transform: uppercase;
+  font-family: "catamaran", Arial, Helvetica, sans-serif;
+  font-weight: 200;
+  font-size: 0.5rem;
+  color: var(--white);
+  padding: 0 3px;
+
+  background: rgba(0, 0, 0, 0.9);
+}
+.invest-collection {
+  width: 70px;
+  height: 70px;
+  border-bottom: 0.5px solid var(--white);
+  margin-left: 0.5rem;
+}
+.invest-collection h4 {
+  font-family: "catamaran", Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--white);
+  text-transform: uppercase;
+  margin-top: 0.5rem;
+}
+.invest-collection h5 {
+  font-size: 0.8rem;
+  margin-bottom: 0.5rem;
+  text-transform: capitalize;
+  color: var(--white);
+}
+.description-house .luxury {
+  font-family: "catamaran", Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--white);
+  text-transform: uppercase;
+  width: fit-content;
+  border-bottom: 3px solid var(--primaryColor);
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.75);
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+}
+.description-house h5 {
+  font-size: 1rem;
+  text-transform: capitalize;
+  color: var(--white);
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.75);
+  margin-bottom: 2rem;
+}
+.description-house button {
+  width: 100%;
+  height: 2rem;
+  font-family: "catamaran,", "roboto", Arial, Helvetica, sans-serif;
+  font-size: 0.6rem;
+  font-weight: 600;
+  background-color: transparent;
+  color: var(--white);
+  border: 2px solid var(--white);
+  text-transform: uppercase;
+  cursor: pointer;
+  border-radius: 4px;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.75);
+  letter-spacing: 0.4px;
+  opacity: 0.75;
+}
+.description-house button:hover {
+  opacity: 1;
+  transition: var(--mainTransition);
+}
+/*end of our design section*/
+/*start of our services section*/
+section#services {
+  width: 100vw;
+  text-align: center;
+}
+.title-services h2 {
+  color: var(--primaryColor);
+  font-family: "Roboto", "sans-serif";
+  font-weight: 500;
+  font-size: 2.5rem;
+  margin: 2rem 0;
+}
+.all-our-services {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1170px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+.different-services {
+  width: 350px;
+  display: flex;
+  justify-content: center;
+  border: 2px solid var(--primaryColor);
+  background-color: white;
+  padding: 1rem;
+  margin-bottom: 2rem;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.different-services:hover {
+  border: 2px solid white;
+}
+.different-services span {
+  display: block;
+  margin-right: 1rem;
+  color: var(--primaryColor);
+}
+.different-services span i {
+  font-size: 2rem;
+}
+.different-services .guide {
+  text-align: left;
+}
+.different-services .guide h4 {
+  font-family: "catamaran", Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  color: #111;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.different-services .guide p {
+  font-family: "catamaran", Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: 1.1rem;
+  padding-top: 1rem;
+  letter-spacing: 0.5px;
+}
+.different-services .guide a {
+  display: inline-block;
+  text-decoration: none;
+  text-transform: capitalize;
+  color: var(--primaryColor);
+  font-family: "roboto", Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  text-align: left;
+  padding-top: 1rem;
+}
+/*end of our services sectioon*/
+/* start of the what our clients are saying section*/
+
+section#testimonials {
+  position: relative;
+  width: 100vw;
+  height: 50vh;
+  text-align: center;
+  background-color: white;
+  padding: 2rem 0;
+}
+.title-testimonials h2 {
+  color: var(--primaryColor);
+  font-family: "Roboto", "sans-serif";
+  font-weight: 500;
+  font-size: 2.5rem;
+  margin: 2rem 0;
+}
+
+.container-testimonials {
+  position: relative;
+  width: 400px;
+  height: 10vw;
+  margin: 0 auto;
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.inline {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.testimonials-clients {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.testimonials-clients .image-name {
+  display: flex;
+  width: 50%;
+  align-items: center;
+}
+.testimonials-clients .image-name .name-location {
+  margin-left: 1.5rem;
+}
+.name-location h6 {
+  font-family: "catamaran", Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  color: #111;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.name-location p {
+  font-family: "catamaran", Arial, Helvetica, sans-serif;
+  font-weight: 200;
+  font-size: 0.8rem;
+  color: #111;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.testimonials-clients .image-name .image-container-client {
+  width: 100px;
+  height: 100px;
+}
+.testimonials-clients .image-name .image-container-client img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+.testimonials-clients .comments-clients {
+  width: 50%;
+  text-align: left;
+  padding-left: 1.5rem;
+  font-family: "catamaran", Arial, Helvetica, sans-serif;
+  font-weight: 500;
+  font-size: 0.8rem;
+  color: #111;
+  letter-spacing: 1.25px;
+  line-height: 22px;
+}
+.button {
+  top: 50%;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transform: translateY(-50%);
+  cursor: pointer;
+  z-index: 5000;
+  visibility: visible !important;
+}
+.button:hover {
+  opacity: 0.8;
+  transition: all ease-in-out 0.3s;
+}
+#arrow-right {
+  background-image: url("images/button/arrow-right.png");
+  right: -50px;
+}
+#arrow-left {
+  background-image: url("images/button/arrow-left.png");
+  left: -50px;
+}
+/* end of the what our clients are saying section*/
+/* start of our contact us section*/
+section#contact-us {
+  text-align: center;
+  width: 100vw;
+}
+.title-contact-us h2 {
+  color: var(--primaryColor);
+  font-family: "Roboto", "sans-serif";
+  font-weight: 500;
+  font-size: 2.5rem;
+  margin: 2rem 0;
+}
+.contact-container {
+  display: flex;
+  justify-content: space-around;
+  max-width: 1170px;
+  margin: 0 auto;
+}
+.contact-form {
+  background-color: white;
+  text-align: left;
+  padding: 1rem 3rem 2rem 2rem;
+  width: 40%;
+}
+.contact-form h4 {
+  font-family: "catamaran", Arial, Helvetica, sans-serif;
+  font-weight: 200;
+  font-size: 1.3rem;
+  color: var(--primaryColor);
+}
+.contact-form div {
+  display: flex;
+  flex-direction: column;
+  margin-top: 0.5rem;
+  border-radius: 10px;
+}
+.contact-form div label {
+  font-family: "catamaran", "roboto", Arial, Helvetica, sans-serif;
+  font-weight: 200;
+  font-size: 1.2rem;
+  text-transform: capitalize;
+  margin-bottom: 0.2rem;
+}
+
+.user-info {
+  position: relative;
+}
+.error-text {
+  visibility: hidden;
+  font-size: 0.8rem;
+  color: var(--colorError);
+}
+.user-check {
+  position: absolute;
+  top: 50%;
+  right: 2%;
+  transform: translate(-50%, -50%);
+  width: 10px;
+  height: 10px;
+  color: white;
+  border-radius: 50%;
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  align-items: center;
+}
+.fail {
+  visibility: hidden;
+  background-color: var(--colorError);
+}
+
+.success {
+  visibility: hidden;
+  background-color: var(--primaryColor);
+}
+.success i {
+  font-size: 0.6rem;
+}
+.contact-form div input,
+textarea {
+  display: block;
+  height: 2rem;
+  border: 1px solid black;
+}
+.contact-form div input[type="text"],
+.contact-form div input[type="email"],
+.contact-form div textarea::placeholder {
+  padding-left: 1rem;
+  font-size: 1rem;
+}
+.contact-form div textarea::placeholder {
+  padding-top: 0.5rem;
+}
+.contact-form div textarea {
+  height: 10rem;
+}
+.contact-form button {
+  border-radius: 10px;
+  font-family: "roboto";
+  font-weight: 200;
+  height: 2rem;
+  margin-top: 1rem;
+  padding: 0 1rem;
+  font-size: 1rem;
+  background-color: var(--primaryColor);
+  color: white;
+  border: 2px solid var(--primaryColor);
+  cursor: pointer;
+  transition: all ease-in-out 0.3s;
+  outline: none;
+}
+.contact-form button:hover {
+  opacity: 0.75;
+  border: 1px solid var(--primaryColor);
+}
+.contact-information {
+  background-color: white;
+  text-align: left;
+  padding: 1rem 3rem 2rem 2rem;
+  width: 40%;
+  height: 30vh;
+}
+.contact-information div {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1.5rem;
+}
+.contact-information div label {
+  font-family: "catamaran", "roboto", Arial, Helvetica, sans-serif;
+  font-weight: 200;
+  font-size: 0.9rem;
+  text-transform: capitalize;
+  margin-bottom: 0.2rem;
+}
+.contact-information div a {
+  display: block;
+  text-decoration: none;
+  font-family: "roboto", "catamaran", Arial, Helvetica, sans-serif;
+  font-weight: 500;
+  color: black;
+}
+
+/* end of our contact us section*/
+/*start of the footer section*/
+footer {
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.75);
+}
+.footer-container {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  margin: 2rem auto;
+  z-index: 3;
+  padding: 2rem 0;
+}
+footer .about-investor {
+  width: 25%;
+}
+.about-investor h4 {
+  font-family: "catamaran", Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  font-size: 1.5em;
+  margin-bottom: 1rem;
+  text-transform: capitalize;
+  color: var(--primaryColor);
+}
+.about-investor p {
+  font-family: "catamaran", Arial, Helvetica, sans-serif;
+  font-weight: 200;
+  font-size: 1.2rem;
+  color: white;
+  letter-spacing: 0.5px;
+}
+.about-investor a {
+  text-decoration: none;
+  color: var(--secondColor);
+  font-family: "roboto", Arial, Helvetica, sans-serif;
+  font-weight: 200;
+  font-size: 1rem;
+  text-align: left;
+  margin-bottom: 0.5rem;
+  color: var(--primaryColor);
+}
+.quick-links h4 {
+  font-family: "catamaran", Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  font-size: 1.5em;
+  margin-bottom: 1rem;
+  text-transform: capitalize;
+  color: var(--primaryColor);
+}
+.quick-links ul li {
+  display: block;
+  font-family: "catamaran", Arial, Helvetica, sans-serif;
+  font-weight: 200;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+  text-transform: capitalize;
+  color: white;
+  cursor: pointer;
+}
+.quick-links ul li:hover {
+  background-color: var(--primaryColor);
+  color: white;
+  text-align: center;
+  transition: all ease-in-out 0.5s;
+}
+.subscribe h4 {
+  font-family: "catamaran", Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  font-size: 1.5em;
+  margin-bottom: 1rem;
+  text-transform: capitalize;
+  color: var(--primaryColor);
+}
+.subscribe .email-costumer input {
+  height: 2rem;
+}
+
+.subscribe .email-costumer .costumer {
+  background-color: var(--primaryColor);
+  border: 1px solid var(--primaryColor);
+  padding: 0 0.5rem;
+  color: white;
+}
+.email-costumer {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: no-wrap;
+  width: 100%;
+}
+.costumer-email {
+  width: 80%;
+}
+.costumer {
+  width: 20%;
+  outline: none;
+}
+.follow-sociaux-medias h6 {
+  font-family: "catamaran", Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--primaryColor);
+  text-transform: capitalize;
+  letter-spacing: 0.5px;
+  margin: 1rem 0;
+}
+.follow-sociaux-medias ul {
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+}
+.follow-sociaux-medias ul li {
+  display: block;
+  color: #f2f2f2;
+  list-style: none;
+}
+small {
+  display: block;
+  color: white;
+  padding-left: 5%;
+}
+
+small span a {
+  display: inline-block;
+  font-size: 1rem;
+  color: var(--primaryColor);
+  font-size: 1rem;
+  text-decoration: none;
+}
+
+
+/*end of the footer section */
+
+@media only screen and (max-width: 767px) {
+  .nav-bar h2 {
+    font-size: 1.5rem;
+    margin-left: 1rem;
+  }
+  .nav-menu {
+    margin-right: 1rem;
+    width: fit-content;
+  }
+
+  .nav-menu ul li span i {
+    display: none;
+  }
+  .nav-menu ul:nth-child(3) {
+    margin-left: 0.2rem;
+    border-radius: 4px;
+  }
+  .nav-menu ul:nth-child(3) li {
+    padding: 0.3rem;
+    color: white;
+  }
+  /* start of the overlay section*/
+
+  .container-explore-menu {
+    width: 90%;
+  }
+  .display-tab input {
+    width: 85%;
+    height: 2.5rem;
+  }
+  .display-tab input::placeholder {
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+  }
+  .display-tab input[type="text"] {
+    padding-left: none;
+    text-align: center;
+  }
+
+  .display-tab button {
+    height: 2.5rem;
+    width: 15%;
+  }
+  /* start of the agent section*/
+
+  .our-houses {
+    width: 80vw;
+    grid-column-gap: none;
+    grid-row-gap: 1rem;
+  }
+  /* end of the agent section*/
+  section#agent {
+    text-align: center;
+  }
+  section#agent h2 {
+    font-size: 2rem;
+  }
+  .our-agents {
+    width: 100vw;
+    grid-row-gap: 1rem;
+  }
+
+  /* end of he agent section */
+  /* how to use the app section */
+
+  section#get-app {
+    text-align: center;
+    background-color: white;
+    padding-top: 1rem;
+  }
+  .section-title h2 {
+    font-size: 2rem;
+    padding: 0;
+    margin: 0;
+  }
+
+  .background-image {
+    width: 100%;
+    height: 75vh;
+    background-image: none;
+    background-color: white;
+    margin: 0;
+    padding: 0;
+  }
+  .container-how-to-use-app {
+    margin: 0 1rem;
+    padding: 0 1rem;
+    flex-direction: column;
+    width: 100vw;
+  }
+  .how-to-use-app {
+    width: 100%;
+    z-index: 7;
+    background-color: var(--white);
+    padding: 1.5rem;
+    text-align: left;
+  }
+
+  .how-to-use-app p {
+    margin-bottom: 1rem;
+    letter-spacing: 1.15px;
+    line-height: 20px;
+  }
+  .how-to-use-app a {
+    font-size: 1.2rem;
+    margin-bottom: 0;
+  }
+  .download-app {
+    height: 30vh;
+    text-align: left;
+    width: 100%;
+  }
+
+  /*end of the how to use the app section */
+  /*start of our design section*/
+  section#design {
+    text-align: center;
+  }
+  .detail-design-container {
+    display: flex;
+    justify-content: flex-start;
+    width: 70%;
+  }
+
+  .title-design h2 {
+    font-size: 2rem;
+  }
+  .title-design p {
+    width: 90%;
+    font-size: 1rem;
+    line-height: 22px;
+    letter-spacing: 1.35px;
+  }
+
+  .title-design button {
+    width: 50%;
+  }
+  .background-design {
+    position: relative;
+    width: 100vw;
+    height: 60vh;
+    background-image: url("images/project.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  .detail-design {
+    display: none;
+  }
+  .description-house {
+    display: none;
+  }
+  /*end of our design section*/
+  /*start of our services section*/
+  section#services {
+    width: 100%;
+    text-align: center;
+  }
+  .title-services h2 {
+    font-size: 2rem;
+  }
+  .all-our-services {
+    margin: 0 2rem;
+  }
+  /*end of our services sectioon*/
+  /* start of the what our clients are saying section*/
+
+  .title-testimonials h2 {
+    font-size: 2rem;
+  }
+  .testimonials-clients .image-name {
+    flex-direction: column;
+    width: 30%;
+  }
+  .testimonials-clients .image-name .name-location {
+    margin-left: 0;
+  }
+  .button {
+    display: none;
+  }
+  /* end of the what our clients are saying section*/
+  /* start of our contact us section*/
+
+  .title-contact-us h2 {
+    font-size: 2rem;
+  }
+  .contact-container {
+    width: 100%;
+    flex-direction: column-reverse;
+  }
+  .contact-form {
+    width: 100%;
+  }
+  .contact-form h4 {
+    font-size: 1rem;
+  }
+
+  .contact-form div label {
+    font-size: 0.9rem;
+  }
+  .contact-form div input[type="text"],
+  .contact-form div textarea::placeholder {
+    padding-left: 1rem;
+    font-size: 0.7rem;
+  }
+  .contact-form div textarea {
+    height: 7rem;
+  }
+  .contact-form button {
+    height: 1.5rem;
+    font-size: 0.8rem;
+  }
+  .contact-information {
+    width: 100%;
+    height: 30vh;
+  }
+  .contact-information div {
+    margin-top: 1rem;
+  }
+  .contact-information div label {
+    font-size: 0.9rem;
+    margin-bottom: 0;
+  }
+
+  /* end of our contact us section*/
+  /*start of the footer section*/
+  footer {
+    width: 100vw;
+  }
+  .footer-container {
+    width: 80%;
+    flex-direction: column;
+
+    z-index: 3;
+    padding: 1rem 0 0;
+  }
+  footer .about-investor {
+    width: 100%;
+  }
+  .about-investor h4 {
+    font-size: 1.2em;
+    margin-bottom: 0.2rem;
+  }
+  .about-investor p {
+    font-size: 1rem;
+  }
+  .about-investor a {
+    display: block;
+    width: fit-content;
+    padding: 0.3rem;
+    margin: 1rem 0;
+    color: white;
+    background-color: var(--primaryColor);
+    font-size: 0.8rem;
+  }
+  .quick-links h4 {
+    font-size: 1rem;
+    margin-bottom: 0.2rem;
+  }
+  .quick-links ul li {
+    font-size: 0.7rem;
+    margin-bottom: 0.6rem;
+  }
+
+  .subscribe h4 {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    text-transform: lowercase;
+  }
+  .subscribe h4::first-letter {
+    text-transform: capitalize;
+  }
+
+  .follow-sociaux-medias h6 {
+    font-size: 0.8rem;
+  }
+  /*end of the footer section */
+}
+@media only screen and (max-width: 400px) {
+  .section-title h2 {
+    font-size: 2rem;
+    padding: 1rem 1rem 1rem;
+    margin-top: 0;
+  }
+  .how-to-use-app {
+    padding: 0.1rem;
+  }
+  .how-to-use-app p {
+    letter-spacing: 1.15px;
+    line-height: 25px;
+  }
+  .download-app {
+    height: 15vh;
+    margin-top: 0.1rem;
+  }
+  .small {
+    font-size: 0.7rem;
+    margin: 0 0.5rem;
+  }
+  small span a {
+    font-size: 0.8rem;
+  }
+}
+/*end of the footer section */
+
+@media only screen and (max-width: 320px) {
+  .download-app {
+    height: 11vh;
+  }
+  small {
+    font-size: 0.7rem;
+  }
+  small span a {
+    font-size: 0.7rem;
+  }
+}
+/*end of the footer section */

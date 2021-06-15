@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Catamaran:400,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/css/all.css" />
+    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="slider.css" />
+
+    <title>iNVESTOR</title>
+  </head>
+  <body>
+    <header>
+      <div class="nav-bar">
+        <div class="logo">
+          <h2>Investor</h2>
+        </div>
+        <div class="nav-menu">
+          <ul data-tab="1">
+            <li>
+              <span><i class="fas fa-search"></i></span>
+            </li>
+            <li>search</li>
+          </ul>
+          <ul data-tab="2">
+            <li>
+              <span><i class="fas fa-user"></i></span>
+            </li>
+            <li>account</li>
+          </ul>
+          <ul data-tab="3">
+            <li>
+              <span id="menu"><i class="fas fa-bars"></i></span>
+            </li>
+            <li>menu</li>
+          </ul>
+        </div>
+      </div>
+      <!-- start of the  search bar-->
+      <section id="search-info">
+        <div class="search">
+          <input
+            type="text"
+            id="search-address"
+            placeholder="Search by Address, City, Zip, and "
+          />
+          <span>More</span>
+          <div class="content-add">
+            <h5>additionnal search fields</h5>
+            <p>
+              neighborhood, subdivision <br />
+              street name or School district
+            </p>
+          </div>
+        </div>
+      </section>
+      <!-- end the  search bar -->
+      <!-- start register page-->
+      <section id="registration">
+        <div class="title">
+          <h4 class="register sub-title show-title">register</h4>
+          <h4 class="sign-in sub-title">sign in</h4>
+        </div>
+        <div class="registration-form wrapper">
+          <form class="form">
+            <div class="email">
+              <label id="email-address">email address</label>
+              <input type="text" placeholder="Enter your email address" />
+            </div>
+            <div class="password">
+              <label id="password">password</label>
+              <input type="text" placeholder="Enter your password" />
+            </div>
+            <p class="required-1">
+              password must be at least 8 characters and include a number or
+              special character
+            </p>
+            <div class="rounded">continue</div>
+            <p class="required-2">forgot your password?</p>
+          </form>
+        </div>
+        <div class="registration-for">
+          <p class="option"><span>or</span></p>
+          <div class="wrapper">
+            <div class="sign-up facebook">
+              <span><i class="fab fa-facebook-square"></i></span>
+              <p>Sign in with Facebook</p>
+            </div>
+          </div>
+          <div class="sign-up google">
+            <span><i class="fab fa-google"></i></span>
+            <p>Sign in with Google</p>
+          </div>
+          <p class="accept-policies">
+            by registering for an account or using this website, you are agree
+            to our <span>Term of Use</span> and <span>Privacy Notice</span>
+          </p>
+        </div>
+      </section>
+
+      <!--end of the register page-->
+      <!- the start of the menu -->
+      <section id="how-it-works">
+        <div class="get-started">
+          <ul>
+            <li><span>buy</span></li>
+            <li><a href="#">property search</a></li>
+            <li><a href="#">buyer's guide</a></li>
+            <li><a href="#">mobile app</a></li>
+          </ul>
+          <ul>
+            <li><span>sell</span></li>
+            <li><a href="#">home value estimates</a></li>
+            <li><a href="#">seller's guide</a></li>
+          </ul>
+          <ul>
+            <li><span>resources</span></li>
+            <li><a href="#">offices search</a></li>
+            <li><a href="#">account benefits</a></li>
+            <li><a href="#">agent search</a></li>
+          </ul>
+        </div>
+      </section>
+
+      <!--this is the end of the menu-->
+      <!--overlay-->
+      <div class="overlay"></div>
+      <!--overlay-->
+      <div class="container-explore-menu">
+        <div class="explore-menu">
+          <h1>buy and sell real state properties</h1>
+          <div class="steps">
+            <ul>
+              <li data-tab="1" class="tabHeader active-tab">buy</li>
+              <li data-tab="2" class="tabHeader">sell</li>
+              <li data-tab="3" class="tabHeader">agents</li>
+              <li data-tab="4" class="tabHeader">offices</li>
+            </ul>
+          </div>
+          <div class="display-tab show" id="display-tab-1">
+            <input type="text" placeholder="Search By Name,City,Zip and More" />
+            <button><i class="fas fa-search"></i></button>
+          </div>
+          <div data-tab="2" class="display-tab hide" id="display-tab-2">
+            <input type="text" placeholder="enter your home address" />
+            <button><i class="fas fa-search"></i></button>
+          </div>
+          <div data-tab="3" class="display-tab hide" id="display-tab-3">
+            <input type="text" placeholder="search agents By name,city,zip" />
+            <button><i class="fas fa-search"></i></button>
+          </div>
+          <div data-tab="4" class="display-tab hide" id="display-tab-4">
+            <input type="text" placeholder="search offices By name,city,zip" />
+            <button><i class="fas fa-search"></i></button>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!--start our property section-->
+    <section id="properties">
+      <div class="section-title">
+        <h2>our properties</h2>
+      </div>
+      <div class="our-houses"></div>
+    </section>
+    <!--end our property section-->
+
+    <!--end our how it works section -->
+    <!--start of our section-->
+    <section id="agent">
+      <div class="agent-container">
+        <div class="agent-title">
+          <h2>our agents</h2>
+        </div>
+        <div class="our-agents">
+          <article>
+            <div class="image-container">
+              <img
+                src="images/gallery/agent-4.jpg"
+                class="agent-photo"
+                alt="agent for maryland"
+              />
+            </div>
+            <div class="all-agent-info">
+              <h4>Gabriel Fono</h4>
+              <h5>Broker owner</h5>
+              <span>Licence# 777.567</span>
+
+              <p><i class="fas fa-phone-alt"></i>(571)290-1634</p>
+              <div class="website-agent">
+                <a href=""> <i class="fab fa-chrome"></i>my website </a>
+              </div>
+              <h5>virginia</h5>
+              <button>contact me</button>
+            </div>
+          </article>
+          <article>
+            <div class="image-container">
+              <img src="images/gallery/agent-1.jpg" class="agent-photo" alt="agent for maryland" />
+            </div>
+            <div class="all-agent-info">
+              <h4>Gabriel Fono</h4>
+              <h5>Broker owner</h5>
+              <span>Licence# 777.567</span>
+          
+              <p><i class="fas fa-phone-alt"></i>(571)290-1634</p>
+              <div class="website-agent">
+                <a href=""> <i class="fab fa-chrome"></i>my website </a>
+              </div>
+              <h5>virginia</h5>
+              <button>contact me</button>
+            </div>
+          </article>
+          <article>
+            <div class="image-container">
+              <img src="images/gallery/agent-2.jpg" class="agent-photo" alt="agent for maryland" />
+            </div>
+            <div class="all-agent-info">
+              <h4>Gabriel Fono</h4>
+              <h5>Broker owner</h5>
+              <span>Licence# 777.567</span>
+          
+              <p><i class="fas fa-phone-alt"></i>(571)290-1634</p>
+              <div class="website-agent">
+                <a href=""> <i class="fab fa-chrome"></i>my website </a>
+              </div>
+              <h5>virginia</h5>
+              <button>contact me</button>
+            </div>
+          </article>
+          <article>
+            <div class="image-container">
+              <img src="images/gallery/agent-3.jpg" class="agent-photo" alt="agent for maryland" />
+            </div>
+            <div class="all-agent-info">
+              <h4>Gabriel Fono</h4>
+              <h5>Broker owner</h5>
+              <span>Licence# 777.567</span>
+          
+              <p><i class="fas fa-phone-alt"></i>(571)290-1634</p>
+              <div class="website-agent">
+                <a href=""> <i class="fab fa-chrome"></i>my website </a>
+              </div>
+              <h5>virginia</h5>
+              <button>contact me</button>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+    <!--end of our section-->
+    <!--start our how it works section -->
+    <section id="get-app">
+      <div class="section-title">
+        <h2>how to use the app</h2>
+      </div>
+      <div class="background-image">
+        <div class="container-how-to-use-app">
+          <div class="how-to-use-app">
+            <h3>get the app</h3>
+            <p>
+              finding your dream home just got easier.Our home search app allows
+              youto continue your search for available listings from the
+              conveniece of your smarphone or tablet- anytime, anywhere.Save
+              homes , and you love, request information, shedule showings and
+              receive push notifications within minutes of homes hitting the
+              markets
+            </p>
+            <a href="#">learn more</a>
+          </div>
+          <div class="download-app">
+            <img src="images/app-house.jfif" alt="house" />
+          </div>
+        </div>
+      </div>
+    </section>
+    start of the type of design you want-->
+    <section id="design">
+      <div class="title-design">
+        <h2>design</h2>
+        <p>
+          Investing in real state with <span>investor</span> is not just about
+          buying and selling or buying or selling properties that already
+          existed, you can also customize your dream house by defining how you
+          want it to look like. we have professionals all over accross the world
+          who can design and buid the type of house you are looking for.
+        </p>
+        <button>click to see more</button>
+      </div>
+      <div class="background-design">
+        <div class="container-detail-description">
+          <div class="detail-design-container">
+            <div class="detail-design"></div>
+          </div>
+          <div class="description-house">
+            <div class="logo-invest">
+              <div class="logo-company">
+                <img src="images/logo.png" alt="logo-company" />
+              </div>
+              <div class="invest-collection">
+                <p><span>the</span></p>
+                <h4>investor</h4>
+                <h5>collection</h5>
+              </div>
+            </div>
+            <h4 class="luxury">luxury</h4>
+            <h5>Fine Homes & Luxury Properties</h5>
+            <button>discover luxury houses designed by expert</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- <section id="grid-section"-->
+    <!-- <section>
+        <div class="grid-container">
+              <img src="images/project.jpg"  id="grid-container-1"  alt=" full house">
+              <img src="images/plan.jpg" class="grid" id="grid-container-2"  alt=" full house">
+              <img src="images/etage-1.jpg" class="grid" id="grid-container-3" alt=" full house">
+        </div>
+    </section> -->
+    <!--end of the type of design you want-->
+    <!--start of all our services-->
+    <section id="services">
+      <div class="title-services">
+        <h2>our services</h2>
+      </div>
+      <div class="all-our-services">
+        <div class="different-services">
+          <span><i class="fas fa-home"></i></span>
+          <div class="guide">
+            <h4>search properties</h4>
+            <p>the fastest way to find what you are looking for</p>
+            <a href="#">learn more</a>
+          </div>
+        </div>
+        <div class="different-services">
+          <span><i class="fas fa-home"></i></span>
+          <div class="guide">
+            <h4>buy properties</h4>
+            <p>the fastest way to find what you are looking for</p>
+            <a href="#">learn more</a>
+          </div>
+        </div>
+        <div class="different-services">
+          <span><i class="fas fa-home"></i></span>
+          <div class="guide">
+            <h4>invest properties</h4>
+            <p>the fastest way to find what you are looking for</p>
+            <a href="#">learn more</a>
+          </div>
+        </div>
+        <div class="different-services">
+          <span><i class="fas fa-home"></i></span>
+          <div class="guide">
+            <h4>list properties</h4>
+            <p>the fastest way to find what you are looking for</p>
+            <a href="#">learn more</a>
+          </div>
+        </div>
+        <div class="different-services">
+          <span><i class="fas fa-home"></i></span>
+          <div class="guide">
+            <h4>search designer</h4>
+            <p>the fastest way to find what you are looking for</p>
+            <a href="#">learn more</a>
+          </div>
+        </div>
+        <div class="different-services">
+          <span><i class="fas fa-home"></i></span>
+          <div class="guide">
+            <h4>search agent</h4>
+            <p>the fastest way to find what you are looking for</p>
+            <a href="#">learn more</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- start of our clients testimonials-->
+    <section id="testimonials">
+      <div class="title-testimonials">
+        <h2>what our clients are saying</h2>
+      </div>
+      <div class="container-testimonials">
+      
+        <div class="inline" id="testimonial-3">
+          <div class="testimonials-clients">
+            <div class="image-name">
+              <div class="image-container-client">
+                <img src="images/gallery/agent-3.jpg" alt="clients" />
+              </div>
+              <div class="name-location">
+                <h6>Brian</h6>
+                <p>fairfax</p>
+              </div>
+            </div>
+            <div class="comments-clients">
+              <p>
+                why I decided to learn programming and becomes and developer
+                within few months
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="inline" id="testimonial-2">
+          <div class="testimonials-clients">
+            <div class="image-name">
+              <div class="image-container-client">
+                <img src="images/gallery/agent-2.jpg" alt="clients" />
+              </div>
+              <div class="name-location">
+                <h6>gabriel</h6>
+                <p>Manassas</p>
+              </div>
+            </div>
+            <div class="comments-clients">
+              <p>I am self taught programmer with no computer science at all</p>
+            </div>
+          </div>
+        </div>
+        <div class="inline" id="testimonial-1">
+          <div class="testimonials-clients">
+            <div class="image-name">
+              <div class="image-container-client">
+                <img src="images/gallery/agent-1.jpg" alt="clients" />
+              </div>
+              <div class="name-location">
+                <h6>john</h6>
+                <p>California</p>
+              </div>
+            </div>
+            <div class="comments-clients">
+              <p>
+                I have never thought that I could be a programmer in my life but
+                now, I am married and have four kids thanks God for everthing.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div id="arrow-left" class="button"></div>
+        <div id="arrow-right" class="button"></div>
+       
+       </div>
+    </section> 
+    <!--end  of our clients testimonials
+    <!--start of contact us form -->
+    <section id="contact-us">
+      <div class="title-contact-us">
+        <h2>contact us</h2>
+      </div>
+      <div class="contact-container">
+        <div class="contact-form">
+          <form class="form-user">
+            <h4>Fill out the form down below</h4>
+            <div>
+              <label for="user-name">name</label>
+              <div class="user-info">
+                <input
+                  type="text"
+                  id="user-name"
+                  placeholder="Enter your name"
+                />
+                <span class="user-check fail">!</span>
+                <span class="success user-check"
+                  ><i class="fas fa-check"></i
+                ></span>
+              </div>
+              <p class="error-text">Error name</p>
+            </div>
+            <div>
+              <label for="user-email" id="email">email</label>
+              <div class="user-info">
+                <input
+                  type="email"
+                  id="user-email"
+                  placeholder="Enter your email"
+                />
+                <span class="user-check fail">!</span>
+                <span class="success user-check"
+                  ><i class="fas fa-check"></i
+                ></span>
+              </div>
+              <p class="error-text">Error email</p>
+            </div>
+            <div>
+              <label for="user-phone">tel</label>
+              <div class="user-info">
+                <input
+                  type="text"
+                  id="user-phone"
+                  placeholder="Enter your phone number"
+                />
+                <span class="user-check fail">!</span>
+                <span class="success user-check"
+                  ><i class="fas fa-check"></i
+                ></span>
+              </div>
+              <p class="error-text">Error phone number</p>
+            </div>
+            <div>
+              <label for="message-textarea">message</label>
+              <textarea
+                id="message-textarea"
+                placeholder="Describe your request "
+              ></textarea>
+            </div>
+            <div class="greeting">
+              <p class="response-back"></p>
+            </div>
+            <button id="button-send">send message</button>
+          </form>
+        </div>
+        <div class="contact-information">
+          <form>
+            <label id="address">Address</label>
+            <address>
+              7598 duneiden lane
+            </address>
+            <div>
+              <label id="phone">phone</label>
+              <a href="">5712901834</a>
+            </div>
+            <div>
+              <label id="second-email">email</label>
+              <a href="">fonoandy@gmail.com</a>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+    <!--end  of contact us form-->
+    <footer>
+      <div class="footer-container">
+        <div class="about-investor">
+          <h4>about investor</h4>
+          <p>
+            Investor in one of the biggest companies in the world and gives
+            opportunities for new investors as well as people who the bad credit
+            story
+          </p>
+          <a href="#">learn more</a>
+        </div>
+        <div class="quick-links">
+          <h4>quick links</h4>
+          <ul>
+            <li><a href="#"></a>about us</li>
+            <li><a href="#"></a>services</li>
+            <li><a href="#"></a>testimonials</li>
+            <li><a href="#"></a>contact us</li>
+          </ul>
+        </div>
+        <div class="subscribe">
+          <h4>Subscribe to our new letters</h4>
+          <div class="email-costumer">
+            <input
+              class="costumer-email"
+              type="email"
+              placeholder="enter your email"
+            />
+            <input class="costumer" type="button" value="send" />
+          </div>
+          <div class="follow-sociaux-medias">
+            <h6>follow us</h6>
+            <ul>
+              <li>
+                <span><a href="#"></a><i class="fab fa-facebook"></i></span>
+              </li>
+              <li>
+                <span><a href="#"></a><i class="fab fa-twitter"></i></span>
+              </li>
+              <li>
+                <span
+                  ><a
+                    href="https://www.youtube.com/channel/UClX4Pgq2F_lhOMVaJvi5m8A"
+                  ></a
+                  ><i class="fab fa-youtube"></i
+                ></span>
+              </li>
+              <li>
+                <span>
+                  <a href="#"><i class="fab fa-instagram"></i></a>
+                </span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <small>
+        copyright &#169; 2020 all rights reverse | this is made by
+        <span><a href="#">Investor.io</a></span>
+      </small>
+    </footer>
+    <script src="main.js"></script>
+  </body>
+</html>

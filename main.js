@@ -1,4 +1,3 @@
-
 // this does not work ToDO Email Tom
 class Slider {
   display() {
@@ -239,20 +238,22 @@ class UI extends Properties {
   displayProperties(properties) {
     let result = "";
     properties.forEach((property) => {
+      const { url, bed, bath, size, price } = property;
+
       result += `
               <article class="our-house">
             <div class="image-container">
-              <img src= ${property.url} alt="house" class="house-img" />
+              <img src= ${url} alt="house" class="house-img" />
             </div>
             
             <div class="house-info">
               <ul>
-                <li class="house-info-1">${property.bed}</li>
-                <li>${property.bath}</li>
-                <li class="house-info-3">${property.size}</li>
+                <li class="house-info-1">${bed}</li>
+                <li>${bath}</li>
+                <li class="house-info-3">${size}</li>
               </ul>
-              <address>${property.location}</address>
-              <h4>${property.price}</h4>
+              <address>${location}</address>
+              <h4>${price}</h4>
             </div>
           </article> 
             `;
@@ -272,12 +273,13 @@ class UI extends Properties {
           let close = document.createElement("div");
           close.setAttribute("class", "close");
           imgWindow.setAttribute("class", "img-window");
+          imgWindow.setAttribute("onclick", "closeImg()");
           imgWindow.appendChild(close);
           let textDiv = document.createTextNode("x");
           close.setAttribute("title", "remove text");
           close.appendChild(textDiv);
           body.appendChild(imgWindow);
-          close.setAttribute("onclick", "this.closeImg()");
+      
 
           let containerImg = document.createElement("div");
           containerImg.setAttribute("class", "container-image");
@@ -314,8 +316,15 @@ class UI extends Properties {
           let newImg = document.querySelector(".new-img");
           if (changeDir === 1) {
             newCalc = currentImage + 1;
+            if (newCalc > properties.length) {
+              console.log(properties);
+              newCalc = 0;
+            }
           } else if (changeDir === 0) {
             newCalc = currentImage - 1;
+            if (newCalc < 0) {
+              newCalc = 0;
+            }
           }
           newImg.setAttribute("src", properties[newCalc].url);
           currentImage = newCalc;
@@ -323,19 +332,20 @@ class UI extends Properties {
       });
     }
   }
- closeImg(){
+  // closeImg() {
+  //   document.querySelector(".img-window").remove();
+  //   document.querySelector(".close").remove();
+  //   document.querySelector(".arrowRight").remove();
+  //   document.querySelector(".arrowLeft").remove();
+  // }
+}
+
+function closeImg() {
   document.querySelector(".img-window").remove();
-  document.querySelector(".close").remove();
-  document.querySelector(".arrowRight").remove();
-  document.querySelector(".arrowLeft").remove();
+  // document.querySelector(".close").remove();
+  document.getElementById("arrow-right").remove();
+  document.getElementById("arrow-left").remove();
 }
-}
-// function closeImg() {
-//   document.querySelector(".img-window").remove();
-//   document.querySelector(".close").remove();
-//   document.querySelector(".arrowRight").remove();
-//   document.querySelector(".arrowLeft").remove();
-// }
 
 class TestimonialClients {
   displayTestimonials() {
@@ -428,100 +438,102 @@ class TestimonialClients {
 }
 
 class Validator {
-
   validateUser() {
-  let submitForm = document.getElementById("button-send");
-  let formValidation = ()=>{
-    submitForm.addEventListener("click", (ev) =>{
-      ev.preventDefault();
-      this.checkUser();
-      document.querySelector(".form-user").reset();
-    });
-  };
-  return formValidation();
-}
+    let submitForm = document.getElementById("button-send");
+    let formValidation = () => {
+      submitForm.addEventListener("click", (ev) => {
+        ev.preventDefault();
+        this.checkUser();
+        document.querySelector(".form-user").reset();
+      });
+    };
+    return formValidation();
+  }
 
-checkUser(){
-  let user = {
-    name: document.getElementById("user-name").value,
-    email: document.getElementById("user-email").value,
-    phoneNumber: document.getElementById("user-phone").value,
-  };
-  this.userName(user);
-  this.userEmail(user);
-  this.userTel(user);
-  this.addUserToCart(user, this.userName(user), this.userEmail(user), this.userTel(user))
-};
+  checkUser() {
+    let user = {
+      name: document.getElementById("user-name").value,
+      email: document.getElementById("user-email").value,
+      phoneNumber: document.getElementById("user-phone").value,
+    };
+    this.userName(user);
+    this.userEmail(user);
+    this.userTel(user);
+    this.addUserToCart(
+      user,
+      this.userName(user),
+      this.userEmail(user),
+      this.userTel(user)
+    );
+  }
 
   userName(user) {
-  let username = "";
-  if (user.name === "") {
-    document.getElementById("user-name").style.borderColor = "red";
-    document.querySelectorAll(".fail")[0].style.visibility = "visible";
-    document.querySelectorAll(".error-text")[0].style.visibility = "visible";
-  } else if (user.name.length > 10) {
-    console.log("text is so long")
-  } else {
-    document.getElementById("user-name").style.borderColor = `#f69314`;
-    document.querySelector(".success").style.visibility = "visible";
-    username = user.name;
+    let username = "";
+    if (user.name === "") {
+      document.getElementById("user-name").style.borderColor = "red";
+      document.querySelectorAll(".fail")[0].style.visibility = "visible";
+      document.querySelectorAll(".error-text")[0].style.visibility = "visible";
+    } else if (user.name.length > 10) {
+      console.log("text is so long");
+    } else {
+      document.getElementById("user-name").style.borderColor = `#f69314`;
+      document.querySelector(".success").style.visibility = "visible";
+      username = user.name;
+    }
+    return username;
   }
-  return username;
-};
 
-  userEmail(user){
-  let useremail = "";
-  if (user.email === "") {
-    console.log("sorry, but the input field can't be empty")
+  userEmail(user) {
+    let useremail = "";
+    if (user.email === "") {
+      console.log("sorry, but the input field can't be empty");
+    }
+    let regExpression = /^([a-zA-Z0-9\.-]+)@([a-zA-Z0-9]+).([a-zA-Z]{2,8})$/;
+    let result = regExpression.test(user.email);
+    if (result) {
+      document.getElementById("user-email").style.borderColor = `#f69314`;
+      document.querySelectorAll(".success")[1].style.visibility = "visible";
+      useremail = user.email;
+    } else {
+      document.getElementById("user-email").style.borderColor = "red";
+      document.querySelectorAll(".fail")[1].style.visibility = "visible";
+      document.querySelectorAll(".error-text")[1].style.visibility = "visible";
+    }
+    return useremail;
   }
-  let regExpression = /^([a-zA-Z0-9\.-]+)@([a-zA-Z0-9]+).([a-zA-Z]{2,8})$/;
-  let result = regExpression.test(user.email)
-  if (result) {
-    document.getElementById("user-email").style.borderColor = `#f69314`;
-    document.querySelectorAll(".success")[1].style.visibility = "visible";
-    useremail = user.email;
-  }
-  else {
-    document.getElementById("user-email").style.borderColor = "red";
-    document.querySelectorAll(".fail")[1].style.visibility = "visible";
-    document.querySelectorAll(".error-text")[1].style.visibility = "visible";
-  }
-  return useremail;
-}
 
   userTel(user) {
-  let usertel = "";
-  if (user.phoneNumber === "") {
-    console.log("sorry, the empty field can be empty")
+    let usertel = "";
+    if (user.phoneNumber === "") {
+      console.log("sorry, the empty field can be empty");
+    }
+    let regExpression = /^[1]-?\d{3}-?\d{3}-?\d{4}$/;
+    let result = regExpression.test(user.phoneNumber);
+    if (result) {
+      document.getElementById("user-phone").style.borderColor = `#f69314`;
+      document.querySelectorAll(".success")[2].style.visibility = "visible";
+      usertel = user.phoneNumber;
+    } else {
+      document.getElementById("user-phone").style.borderColor = "red";
+      document.querySelectorAll(".fail")[2].style.visibility = "visible";
+      document.querySelectorAll(".error-text")[2].style.visibility = "visible";
+    }
+    return usertel;
   }
-  let regExpression = /^[1]-?\d{3}-?\d{3}-?\d{4}$/;
-  let result = regExpression.test(user.phoneNumber);
-  if (result) {
-    document.getElementById("user-phone").style.borderColor = `#f69314`;
-    document.querySelectorAll(".success")[2].style.visibility = "visible";;
-    usertel = user.phoneNumber;
-  } else {
-    document.getElementById("user-phone").style.borderColor = "red";
-    document.querySelectorAll(".fail")[2].style.visibility = "visible";
-    document.querySelectorAll(".error-text")[2].style.visibility = "visible";
-  }
-  return usertel;
-};
 
   addUserToCart(user, userName, userEmail, userTel) {
-  if (userTel.length > 0 && userName.length > 0 && userEmail.length > 0) {
-    let users = localStorage.getItem("currentUser")
-    users = JSON.parse(users)
-    if (!users) {
-      users = [];
+    if (userTel.length > 0 && userName.length > 0 && userEmail.length > 0) {
+      let users = localStorage.getItem("currentUser");
+      users = JSON.parse(users);
+      if (!users) {
+        users = [];
+      }
+      users.push(user);
+      localStorage.setItem("currentUser", JSON.stringify(users));
+    } else {
+      alert("I am sorry, you are not qualified");
     }
-    users.push(user)
-    localStorage.setItem("currentUser", JSON.stringify(users))
   }
-  else {
-    alert("I am sorry, you are not qualified")
-  }
- }
 }
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -547,7 +559,6 @@ document.addEventListener("DOMContentLoaded", () => {
   let clientTestimonials = new TestimonialClients();
   clientTestimonials.displayTestimonials();
   //validator
-  let user = new Validator()
-  user.validateUser()
+  let user = new Validator();
+  user.validateUser();
 });
-

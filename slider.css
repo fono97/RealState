@@ -1,13 +1,12 @@
 /* start of our nav-toggle*/
 
-section#search-info { 
-  
+section#search-info {
   overflow: hidden;
   position: absolute;
   width: 0rem;
   height: calc(100vh - 75px);
   right: 0;
-  top:75px;
+  top: 75px;
   z-index: 2;
   background-color: var(--lightGray);
   transition: all 0.3s ease-in-out;
@@ -68,7 +67,7 @@ section#registration {
 }
 
 .title {
-   visibility: hidden;
+  visibility: hidden;
   display: flex;
   height: fit-content;
   justify-content: space-between;
@@ -77,17 +76,15 @@ section#registration {
   width: 100%;
   border-bottom: 2px solid var(--color-grey-light);
   text-transform: capitalize;
- 
-  
 }
- 
+
 h4.register {
   display: flex;
   justify-content: center;
   align-items: center;
   padding-bottom: 0.8rem;
   width: 50%;
-  
+
   font-size: 1rem;
   height: 100%;
   cursor: pointer;
@@ -112,16 +109,14 @@ h4.sign-in {
 }
 /* 
 /*  */
-.registration-form{
-  visibility:hidden;
-  
+.registration-form {
+  visibility: hidden;
 }
-.registration-for{
-  visibility:hidden;
+.registration-for {
+  visibility: hidden;
 }
 div.wrapper {
   padding: 0rem 2rem;
-  
 }
 .email {
   display: flex;
@@ -350,7 +345,7 @@ section#grid-section {
 
 /* style of the pop up container */
 .img-window {
-  position: relative;
+  /* position: relative; */
   width: 100vw;
   height: 100vh;
   position: fixed;
@@ -378,7 +373,7 @@ section#grid-section {
 }
 .img-window .container-image {
   position: relative;
-  width: 1040px;
+  width: 800px;
   height: 800px;
   margin: 0 auto;
   display: flex;
@@ -388,6 +383,7 @@ section#grid-section {
 .img-window .container-image img {
   width: 90%;
   height: 90%;
+  object-fit: contain;
 }
 
 .arrow {
@@ -413,7 +409,3 @@ section#grid-section {
   background-image: url("images/button/arrow-right.png");
   right: 0;
 }
-
-*/
-
-/* style of the pop up container */
